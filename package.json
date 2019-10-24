@@ -1,0 +1,28 @@
+{
+  "name": "node-arduino-serial-monitor",
+  "version": "1.0.1",
+  "description": "Node app to visualize serial data",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atick-faisal/Node-Arduino-Serial-Monitor.git"
+  },
+  "keywords": [
+    "node",
+    "arduino",
+    "serial",
+    "visualization"
+  ],
+  "author": "Arick Faisal",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/atick-faisal/Node-Arduino-Serial-Monitor/issues"
+  },
+  "homepage": "https://github.com/atick-faisal/Node-Arduino-Serial-Monitor#readme",
+  "dependencies": {
+    "serialport": "^7.1.5"
+  }
+}
