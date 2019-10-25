@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/atick-faisal/Node-Arduino-Serial-Monitor#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "serialport": "^7.1.5"
   }
 }
