@@ -16,7 +16,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get('/values', function(req, res) {
-    res.json({"Values": value});
+    res.json({"value": value.toString()});
 });
 
 const port = process.env.PORT || 3500;
