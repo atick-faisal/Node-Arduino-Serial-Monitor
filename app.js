@@ -1,12 +1,25 @@
-const SerialPort = require('serialport');
-const Readline = require('@serialport/parser-readline');
-const port = new SerialPort('/dev/ttyACM0', { baudRate: 9600 });
-var value = '';
+const serialPort = require('serialport');
+const express = require('express');
+const bodyParser = require('body-parser');
+const readline = require('@serialport/parser-readline');
 
-const parser = new Readline();
-port.pipe(parser);
+var value = '0';
 
+const serial = new serialPort('/dev/ttyACM0', { baudRate: 9600 });
+const parser = new readline();
+serial.pipe(parser);
 parser.on('data', function(line) {
-    value = line;
-    console.log(line);
-})
+    value = line.slice(0, -1);
+});
+
+const app = express();
+app.use(bodyParser.json());
+
+app.get('/values', function(req, res) {
+    res.json({"Values": value});
+});
+
+const port = process.env.PORT || 3500;
+app.listen(port, function() {
+    console.log(`Server started on port ${port}`);
+});
