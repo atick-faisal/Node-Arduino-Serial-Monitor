@@ -2,7 +2,7 @@
   "name": "node-arduino-serial-monitor",
   "version": "1.0.1",
   "description": "Node app to visualize serial data",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
