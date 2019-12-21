@@ -35,8 +35,8 @@ h1 {
   flex: 1;
   background-color: #2f343f;
   padding: 20px;
-  margin: 8px;
-  margin-right: 8px;
+  margin: 4px;
+  margin-right: 4px;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
